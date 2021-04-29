@@ -25,121 +25,121 @@
   </head>
   <body>
     <div class="weather-app-wrapper">
-    <div class="container">
-      <div class="weather-app">
-        <form class="search-form" id="search-form">
-          <div class="row">
-            <div class="col-6">
-              <input
+      <div class="container">
+        <div class="weather-app">
+          <form class="search-form" id="search-form">
+            <div class="row">
+             <div class="col-6">
+               <input
                 type="search"
                 placeholder="Enter a city"
                 class="form-control shadow-sm"
                 autofocus="on"
                 autocomplete="off"
                 id="city-input"
-              />
-            </div>
-            <div class="col-3">
-              <input
+               />
+              </div>
+             <div class="col-3">
+                <input
                 type="submit"
                 value="🔎"
                 class="form-control btn btn-primary shadow-sm w-100"
-              />
+               />
+              </div>
+             <div class="col-3">
+               <button class="btn btn-success w-100" id="current-location-button">
+                🗺
+               </button>
+             </div>
             </div>
-            <div class="col-3">
-              <button class="btn btn-success w-100" id="current-location-button">
-              🗺
-              </button>
-            </div>
-          </div>
-        </form>
-        <h1 id = "city"></h1>
-        <ul class="date-time">
-          <li id="date">Friday, March 17</li>
-          <li id="time">13:45</li>
-        </ul>
-        <div class="row">
-          <div class="col-6">
-            <div class="row">
-              <div class="col-2">
-                <img
+          </form>
+          <h1 id = "city"></h1>
+          <ul class="date-time">
+            <li id="date">Friday, March 17</li>
+            <li id="time">13:45</li>
+          </ul>
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-2">
+                  <img
                   src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
                   alt="sunny"
                   class="weather-icon"
-                />
-              </div>
-              <div class="col-5">
-                <span class="temperature" id="temperature"></span> <span class="units">
-                  <a href = "#" id="celsius-link">°C</a> | 
-                  <a href = "#" id="fahrenheit-link">°F</a>
-                </span>
-              </div>
-            </div>
-          </div>
-          <div class="col-5">
-            <ul>
-              <li>Humidity: <span id="humidity"></span>%</li>
-              <li>Wind: <span id="wind"></span> km/h</li>
-            </ul>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-6">
-            <div class="row">
-              <div class="col-3">
-                <span class="current-conditions" id="description"></span>
-              </div>
-              <div class="col-3">
-                <span class="temperature-high-low">🔺<span id="high"></span>°🔻<span id="low"></span>°</span>
+                  />
+                </div>
+                <div class="col-5">
+                  <span class="temperature" id="temperature"></span> <span class="units">
+                    <a href = "#" id="celsius-link">°C</a> | 
+                    <a href = "#" id="fahrenheit-link">°F</a>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-        <hr />
-        <div class="row" id="forecast">
-          <div class="col">
-            Sat
-            <div class="row">
-              <div class="col">🌨</div>
-              <div class="col">🔺9°🔻5°</div>
+            <div class="col-5">
+              <ul>
+                <li>Humidity: <span id="humidity"></span>%</li>
+                <li>Wind: <span id="wind"></span> km/h</li>
+              </ul>
             </div>
           </div>
-          <div class="col">
-            Sun
-            <div class="row">
-              <div class="col">🌨</div>
-              <div class="col">🔺9°🔻5°</div>
+          <div class="row">
+            <div class="col-6">
+              <div class="row">
+                <div class="col-3">
+                  <span class="current-conditions" id="description"></span>
+                </div>
+                <div class="col-3">
+                  <span class="temperature-high-low">🔺<span id="high"></span>°🔻<span id="low"></span>°</span>
+                </div>
+              </div>
             </div>
           </div>
-          <div class="col">
-            Mon
-            <div class="row">
-              <div class="col">🌨</div>
-              <div class="col">🔺9°🔻5°</div>
+          <hr />
+          <div class="row" id="forecast">
+            <div class="col">
+             Sat
+              <div class="row">
+                <div class="col">🌨</div>
+                <div class="col">🔺9°🔻5°</div>
+              </div>
             </div>
-          </div>
-          <div class="col">
-            Tue
-            <div class="row">
-              <div class="col">🌨</div>
-              <div class="col">🔺9°🔻5°</div>
+            <div class="col">
+              Sun
+              <div class="row">
+                <div class="col">🌨</div>
+                <div class="col">🔺9°🔻5°</div>
+              </div>
             </div>
-          </div>
-          <div class="col">
-            Wed
-            <div class="row">
-              <div class="col">🌨</div>
-              <div class="col">🔺9°🔻5°</div>
+            <div class="col">
+              Mon
+              <div class="row">
+                <div class="col">🌨</div>
+                <div class="col">🔺9°🔻5°</div>
+              </div>
             </div>
-             <div class="col">
+            <div class="col">
+              Tue
+              <div class="row">
+                <div class="col">🌨</div>
+                <div class="col">🔺9°🔻5°</div>
+              </div>
+            </div>
+            <div class="col">
+              Wed
+              <div class="row">
+                <div class="col">🌨</div>
+                <div class="col">🔺9°🔻5°</div>
+              </div>
+              <div class="col">
            
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <small>
-        <a href="https://github.com/nina911/WeatherApp" target="_blank">Open-source code</a>, by Nina
-    </small>
+        <small>
+          <a href="https://github.com/nina911/WeatherApp" target="_blank">Open-source code</a>, by Nina
+        </small>
     </div>
     <script src="src/app.js"></script>
   </body>
