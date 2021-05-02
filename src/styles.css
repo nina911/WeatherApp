@@ -62,3 +62,6 @@ li {
 .temperature-high-low {
   font-size: 13px;
 }
+.units a.active {
+  color: black;
+}
