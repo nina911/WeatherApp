@@ -35,7 +35,14 @@ li {
   font-size: 15px;
   margin-bottom: 10px;
 }
-
+.search {
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+  transition: all 200ms ease-in-out;
+}
+.current {
+  box-shadow: 5px 5px 10px rgb(0 0 0 / 30%);
+  transition: all 200ms ease-in-out;
+}
 .temperature {
   font-size: 50px;
   line-height: 1;
