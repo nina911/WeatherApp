@@ -8,6 +8,7 @@ ul {
   margin: 0 0 10px;
   padding: 0;
   padding-left: 0;
+  opacity: 0.7;
 }
 
 li {
@@ -30,8 +31,9 @@ li {
   padding: 30px;
 }
 
-.weather-search-form {
+.search-form {
   font-size: 15px;
+  margin-bottom: 10px;
 }
 
 .temperature {
@@ -58,23 +60,28 @@ li {
 }
 .current-conditions {
   font-size: 13px;
+  opacity: 0.8;
 }
 .temperature-high-low {
   font-size: 13px;
+  opacity: 0.8;
 }
 .units a.active {
   color: black;
 }
 .forecast {
   margin-top: 20 px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
   text-align: center;
   line-height: 0.5;
 }
 .forecast-date {
-  font-size: 16px;
+  font-size: 14px;
   opacity: 0.8;
 }
 .forecast-temperatures {
-  font-size: 12px;
-  opacity: 0.8;
+  font-size: 11px;
+  opacity: 0.7;
 }
