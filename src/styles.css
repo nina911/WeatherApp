@@ -65,3 +65,16 @@ li {
 .units a.active {
   color: black;
 }
+.forecast {
+  margin-top: 20 px;
+  text-align: center;
+  line-height: 0.5;
+}
+.forecast-date {
+  font-size: 16px;
+  opacity: 0.8;
+}
+.forecast-temperatures {
+  font-size: 12px;
+  opacity: 0.8;
+}
