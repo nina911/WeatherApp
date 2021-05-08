@@ -57,8 +57,6 @@ function displayForecast(response) {
 
   let forecastElement = document.querySelector("#forecast");
 
-  //let days = ["Sat", "Sun", "Mon", "Tue", "Wed"];
-
   let forecastHTML = `<div class="row">`;
   forecast.forEach(function (forecastDay, index) {
     if (index < 5) {
@@ -94,7 +92,6 @@ function displayForecast(response) {
 //Feature #2 Weather Conditions (city, temperature, humidity, wind, current location)
 
 function getForecast(coordinates) {
-  console.log(coordinates);
   let apiKey = "b34590da8d3becea16a03bf40d7216f0";
   let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayForecast);
@@ -102,7 +99,6 @@ function getForecast(coordinates) {
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-
   let temperatureElement = document.querySelector("#temperature");
   celsiusTemperature = Math.round(response.data.main.temp);
   temperatureElement.innerHTML = Math.round(celsiusTemperature);
@@ -156,25 +152,6 @@ function getCurrentLocation(event) {
   navigator.geolocation.getCurrentPosition(searchLocation);
 }
 
-//Feature #3 Celsius to Fahrenheit
-
-function displayFahrenheitTemperature(event) {
-  event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
-  celsiusLink.classList.remove("active");
-  fahrenheitLink.classList.add("active");
-  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
-  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
-}
-
-function displayCelsiusTemperature(event) {
-  event.preventDefault();
-  celsiusLink.classList.add("active");
-  fahrenheitLink.classList.remove("active");
-  let temperatureElement = document.querySelector("#temperature");
-  temperatureElement.innerHTML = Math.round(celsiusTemperature);
-}
-
 //Feature #1 Date and Time
 let dateElement = document.querySelector("#date");
 let timeElement = document.querySelector("#time");
@@ -189,12 +166,31 @@ searchForm.addEventListener("submit", handleSubmit);
 let currentLocationButton = document.querySelector("#current-location-button");
 currentLocationButton.addEventListener("click", getCurrentLocation);
 
-let celsiusTemperature = null;
-
-let fahrenheitLink = document.querySelector("#fahrenheit-link");
-fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
-
-let celsiusLink = document.querySelector("#celsius-link");
-celsiusLink.addEventListener("click", displayCelsiusTemperature);
-
 searchCity("Essen");
+
+//Feature #3 Celsius to Fahrenheit
+
+// function displayFahrenheitTemperature(event) {
+//   event.preventDefault();
+//   let temperatureElement = document.querySelector("#temperature");
+//   celsiusLink.classList.remove("active");
+//   fahrenheitLink.classList.add("active");
+//   let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+//   temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+// }
+
+// function displayCelsiusTemperature(event) {
+//   event.preventDefault();
+//   celsiusLink.classList.add("active");
+//   fahrenheitLink.classList.remove("active");
+//   let temperatureElement = document.querySelector("#temperature");
+//   temperatureElement.innerHTML = Math.round(celsiusTemperature);
+// }
+
+//let celsiusTemperature = null;
+
+// let fahrenheitLink = document.querySelector("#fahrenheit-link");
+// fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+// let celsiusLink = document.querySelector("#celsius-link");
+// celsiusLink.addEventListener("click", displayCelsiusTemperature);
